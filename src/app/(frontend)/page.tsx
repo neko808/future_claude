@@ -339,7 +339,8 @@ export default async function HomePage() {
 
         <div className="news__row">
           {newsItems.map((item, i) => {
-            const thumb = mediaUrl(item.image, '')
+            // const thumb = mediaUrl(item.image, '')
+            const thumb = 'image' in item ? mediaUrl(item.image, '') : ''
             return (
               <article className="news-card" key={i}>
                 <div className="news-card__body">
